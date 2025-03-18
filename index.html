@@ -1,126 +1,138 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>news</title>
-  <style>
-        /* Reset default margins and padding */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        /* Body styling */
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.2; /* Already tightened line spacing */
-            background-color: #f5f5f5;
-            letter-spacing: -0.5px; /* Tighten character spacing globally */
-        }
+    <meta charset="utf-8"/>
 
-        /* Container for the entire layout */
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>hammer</title>
+    <meta name="description" content="tolu akinmulero"/>
+    <style>
+    iframe {
+    }
 
-        /* Date styling */
-        .date {
-            font-size: 14px;
-            color: #333;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: -0.5px; /* Tighten character spacing */
-        }
+    body, p, a {
+        font-family: Helvetica Neue, sans-serif;
+        margin: 0;
+        padding: 0;
+        font-size: 0.75rem;
+        line-height: 2;
+        color: inherit;
+        text-decoration: none;
+    }
 
-        /* Main headline styling */
-        .main-headline {
-            font-size: 36px;
-            color: #000;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            font-weight: bold;
-            letter-spacing: -1px; /* Slightly tighter for headlines */
-        }
+    a:hover {
+        color: #0000ff;
+    }
 
-        /* Article section layout */
-        .article-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-        }
+    .navbar-link:hover {
+        filter: blur(1px);
+    }
 
-        /* Sub-headline styling */
-        .sub-headline {
-            font-size: 24px;
-            color: #000;
-            text-transform: uppercase;
-            width: 50%;
-            font-weight: bold;
-            letter-spacing: -0.8px; /* Tighten character spacing */
-        }
+    body {
+        text-transform: lowercase;
+    }
 
-        /* Image placeholder styling */
-        .image-placeholder {
-            width: 45%;
-            height: 200px;
-            background-color: #000; /* Placeholder for the image */
-            border: 1px solid #000;
-        }
+    nav {
+        padding: 1.5em 1.5em 0;
+        display: flex;
+        gap: 0.75em;
+        margin-bottom: 1.5em;
+    }
 
-        /* Bottom headline styling */
-        .bottom-headline {
-            font-size: 24px;
-            text-transform: uppercase;
-            margin-bottom: 5px;
-            font-weight: bold;
-            letter-spacing: -0.8px; /* Tighten character spacing */
-        }
+    .container {
+        display: flex;
+        gap: 3rem;
+        /* Space between grid items */
+        padding: 1.5em;
+    }
 
-        /* Bottom subtext styling */
-        .bottom-subtext {
-            font-size: 16px;
-            margin-bottom: 20px;
-            letter-spacing: -0.5px; /* Tighten character spacing */
-        }
+    .footer {
+        position: fixed;
+        bottom: 1.5em;
+        left: 0.75em;
+        right: 0.75em;
+        text-align: center;
+        font-size: 0.75em;
+    }/* Light mode styles */
 
-        /* Color classes */
-        .red {
-            color: #ff0000; /* Red color for specific headlines */
-        }
+    body.light {
+        background-color: white;
+        color: black;
+    }/* Dark mode styles */
 
-        .blue {
-            color: #0000ff; /* Blue color for specific subtext */
-        }
+    body.dark {
+        background-color: #000;
+        color: white;
+    }
+
+    #darkModeLink {
+        color: black;
+    }
+
+    body.dark #darkModeLink {
+        color: white;
+    }
     </style>
+    
 </head>
-<body>
+<body class="light">
+    <nav>
+        <a href="HOME" class="navbar-link">
+            <b>home</b>
+        </a>
+      <a href="/news/">news</a>
+        <div id="datetime"></div>
+        <a href="#" id="darkModeLink">dark mode</a>
+    </nav>
     <div class="container">
-        <!-- Date -->
-        <div class="date">MARCH 6 2025</div>
-
-        <!-- Main Headline -->
-        <h1 class="main-headline">APRON RECORDS COLLABS WITH NIKE ON AIR MAX “180”</h1>
-
-        <!-- Article Section -->
-        <div class="article-section">
-            <!-- Left: Small Headline -->
-            <h2 class="sub-headline">STEVEN JULIEN - ULTRA FT. JAMES MASSIAH (VIDEO)</h2>
-            <!-- Right: Image Placeholder -->
-            <div class="image-placeholder"></div>
+        <div class="column">
+            <p>
+                <b>loading...</b>
+            </p>
+            <p>contact/p>
+            <p><b>buy hammer mag</b>b></p>
+            <p>
+               <b>print + online </b>
+                    <b>IRL / URL </b></a>
+            </p>
+            <p>
+                <a href="#" target="blank2">ok</a>
+         
+            </p>
+        
         </div>
-
-        <!-- Bottom Headlines -->
-        <h3 class="bottom-headline red">IBM LAUNCHES AI DEVELOPMENT PLATFORM</h3>
-        <p class="bottom-subtext blue">IBM Launches AI Development Platform With Renewed...</p>
     </div>
+    <footer class="footer">
+       © 2025 hammer mag
+    </footer>
+    <script>
+    const darkModeLink = document.getElementById('darkModeLink');
+    darkModeLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.body.classList.toggle('dark');
+        document.body.classList.toggle('light');
+        darkModeLink.textContent = document.body.classList.contains('dark') ? 'light mode' : 'dark mode';
+    });
+    </script>
+    <script>
+    function updateDateTime() {
+        const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        const options = {
+            timeZone: userTimeZone,
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: true
+        };
+        const currentDateTime = new Date().toLocaleString('en-US', options);
+        document.getElementById('datetime').innerText = currentDateTime;
+    }
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+    </script>
+
 </body>
 </html>
