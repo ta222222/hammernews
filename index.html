@@ -1,138 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
     <meta charset="utf-8"/>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>hammer</title>
-    <meta name="description" content="tolu akinmulero"/>
+    <meta name="description" content="hammer mag"/>
     <style>
-    iframe {
-    }
+        iframe {
+        }
 
-    body, p, a {
-        font-family: Helvetica Neue, sans-serif;
-        margin: 0;
-        padding: 0;
-        font-size: 0.75rem;
-        line-height: 2;
-        color: inherit;
-        text-decoration: none;
-    }
+        body, p, a {
+            font-family: Helvetica Neue, sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 0.75rem;
+            line-height: 2;
+            color: inherit;
+            text-decoration: none;
+        }
 
-    a:hover {
-        color: #0000ff;
-    }
+        a:hover {
+            color: #0000ff;
+        }
 
-    .navbar-link:hover {
-        filter: blur(1px);
-    }
+        .navbar-link:hover {
+            filter: blur(1px);
+        }
 
-    body {
-        text-transform: lowercase;
-    }
+        body {
+            text-transform: lowercase;
+        }
 
-    nav {
-        padding: 1.5em 1.5em 0;
-        display: flex;
-        gap: 0.75em;
-        margin-bottom: 1.5em;
-    }
+        nav {
+            padding: 1.5em 1.5em 0;
+            display: flex;
+            gap: 0.75em;
+            margin-bottom: 1.5em;
+        }
 
-    .container {
-        display: flex;
-        gap: 3rem;
-        /* Space between grid items */
-        padding: 1.5em;
-    }
+        .container {
+            display: flex;
+            gap: 3rem;
+            /* Space between grid items */
+            padding: 1.5em;
+        }
 
-    .footer {
-        position: fixed;
-        bottom: 1.5em;
-        left: 0.75em;
-        right: 0.75em;
-        text-align: center;
-        font-size: 0.75em;
-    }/* Light mode styles */
+        .footer {
+            position: fixed;
+            bottom: 1.5em;
+            left: 0.75em;
+            right: 0.75em;
+            text-align: center;
+            font-size: 0.75em;
+        }/* Light mode styles */
 
-    body.light {
-        background-color: white;
-        color: black;
-    }/* Dark mode styles */
+        body.light {
+            background-color: white;
+            color: black;
+        }/* Dark mode styles */
 
-    body.dark {
-        background-color: #000;
-        color: white;
-    }
+        body.dark {
+            background-color: #000;
+            color: white;
+        }
 
-    #darkModeLink {
-        color: black;
-    }
+        #darkModeLink {
+            color: black;
+        }
 
-    body.dark #darkModeLink {
-        color: white;
-    }
+        body.dark #darkModeLink {
+            color: white;
+        }
+
+        /* Styles applied when a link is clicked */
+        .loading-link-style {
+            background-color: red !important;
+        }
+
+        .loading-link-style * { /* Apply to all elements within the body */
+            font-weight: bold !important;
+        }
     </style>
-    
 </head>
 <body class="light">
     <nav>
         <a href="HOME" class="navbar-link">
             <b>home</b>
         </a>
-      <a href="https://ta222222.github.io/hammernews/news/">news</a>
+        <a href="https://ta222222.github.io/hammernews/news/" class="loading-link">news</a>
         <div id="datetime"></div>
         <a href="#" id="darkModeLink">dark mode</a>
     </nav>
     <div class="container">
         <div class="column">
             <p>
-                <b>loading...</b>
+                loading...
             </p>
             <p>contact</p>
             <p><b>buy hammer mag</b></p>
             <p>
-               <b>print + online </b>
-                    <b>IRL / URL </b></a>
+               <p><b>print + online </b></p>
+                    <p><b>IRL / URL </b>
             </p>
             <p>
-                <a href="#" target="blank2">ok</a>
-         
+                <a href="#" target="blank2" class="loading-link">ok</a>
             </p>
-        
         </div>
     </div>
     <footer class="footer">
-       © 2025 hammer mag
+        © 2025 hammer mag
     </footer>
     <script>
-    const darkModeLink = document.getElementById('darkModeLink');
-    darkModeLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        document.body.classList.toggle('dark');
-        document.body.classList.toggle('light');
-        darkModeLink.textContent = document.body.classList.contains('dark') ? 'light mode' : 'dark mode';
-    });
+        const darkModeLink = document.getElementById('darkModeLink');
+        darkModeLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.body.classList.toggle('dark');
+            document.body.classList.toggle('light');
+            darkModeLink.textContent = document.body.classList.contains('dark') ? 'light mode' : 'dark mode';
+        });
     </script>
     <script>
-    function updateDateTime() {
-        const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-        const options = {
-            timeZone: userTimeZone,
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit',
-            second: '2-digit',
-            hour12: true
-        };
-        const currentDateTime = new Date().toLocaleString('en-US', options);
-        document.getElementById('datetime').innerText = currentDateTime;
-    }
-    setInterval(updateDateTime, 1000);
-    updateDateTime();
+        function updateDateTime() {
+            const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            const options = {
+                timeZone: userTimeZone,
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true
+            };
+            const currentDateTime = new Date().toLocaleString('en-US', options);
+            document.getElementById('datetime').innerText = currentDateTime;
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
     </script>
+    <script>
+        const loadingLinks = document.querySelectorAll('.loading-link');
 
+        loadingLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                // Prevent the default link behavior (navigation)
+                event.preventDefault();
+
+                // Add the loading style to the body
+                document.body.classList.add('loading-link-style');
+
+                // Get the target URL from the link's href attribute
+                const targetURL = this.getAttribute('href');
+
+                // Simulate a delay (you can remove this in a real application)
+                // or replace it with the actual loading process
+                setTimeout(() => {
+                    // Navigate to the target URL after the delay
+                    window.location.href = targetURL;
+
+                    // Optionally, you could remove the loading style here
+                    // if you want it to disappear after the new page starts loading.
+                    // However, it's generally better to keep it until the new page starts
+                    // to give the user visual feedback.
+                    // document.body.classList.remove('loading-link-style');
+                }, 500); // Adjust the delay as needed
+            });
+        });
+    </script>
 </body>
 </html>
