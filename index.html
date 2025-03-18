@@ -1,0 +1,126 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>news</title>
+  <style>
+        /* Reset default margins and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.2; /* Already tightened line spacing */
+            background-color: #f5f5f5;
+            letter-spacing: -0.5px; /* Tighten character spacing globally */
+        }
+
+        /* Container for the entire layout */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* Date styling */
+        .date {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: -0.5px; /* Tighten character spacing */
+        }
+
+        /* Main headline styling */
+        .main-headline {
+            font-size: 36px;
+            color: #000;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: -1px; /* Slightly tighter for headlines */
+        }
+
+        /* Article section layout */
+        .article-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        /* Sub-headline styling */
+        .sub-headline {
+            font-size: 24px;
+            color: #000;
+            text-transform: uppercase;
+            width: 50%;
+            font-weight: bold;
+            letter-spacing: -0.8px; /* Tighten character spacing */
+        }
+
+        /* Image placeholder styling */
+        .image-placeholder {
+            width: 45%;
+            height: 200px;
+            background-color: #000; /* Placeholder for the image */
+            border: 1px solid #000;
+        }
+
+        /* Bottom headline styling */
+        .bottom-headline {
+            font-size: 24px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            font-weight: bold;
+            letter-spacing: -0.8px; /* Tighten character spacing */
+        }
+
+        /* Bottom subtext styling */
+        .bottom-subtext {
+            font-size: 16px;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px; /* Tighten character spacing */
+        }
+
+        /* Color classes */
+        .red {
+            color: #ff0000; /* Red color for specific headlines */
+        }
+
+        .blue {
+            color: #0000ff; /* Blue color for specific subtext */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Date -->
+        <div class="date">MARCH 6 2025</div>
+
+        <!-- Main Headline -->
+        <h1 class="main-headline">APRON RECORDS COLLABS WITH NIKE ON AIR MAX “180”</h1>
+
+        <!-- Article Section -->
+        <div class="article-section">
+            <!-- Left: Small Headline -->
+            <h2 class="sub-headline">STEVEN JULIEN - ULTRA FT. JAMES MASSIAH (VIDEO)</h2>
+            <!-- Right: Image Placeholder -->
+            <div class="image-placeholder"></div>
+        </div>
+
+        <!-- Bottom Headlines -->
+        <h3 class="bottom-headline red">IBM LAUNCHES AI DEVELOPMENT PLATFORM</h3>
+        <p class="bottom-subtext blue">IBM Launches AI Development Platform With Renewed...</p>
+    </div>
+</body>
+</html>
