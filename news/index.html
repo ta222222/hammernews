@@ -22,7 +22,7 @@
             line-height: 2;
             color: inherit;
             text-decoration: none;
-            text-transform: lowercase;
+            text-transform: uppercase;
         }
 
         /* Normal mode styles */
@@ -43,6 +43,8 @@
             display: flex;
             gap: 0.75em; /* 12px */
             margin-bottom: 1.5em; /* 24px */
+            position: sticky;
+            top: 0;
         }
 
         /* Container for the entire layout */
@@ -76,12 +78,6 @@
             width: 50%;
         }
 
-        .image-placeholder {
-            width: 45%;
-            height: 12.5rem; /* 200px */
-            background-color: #000; /* Placeholder for the image */
-            border: 0.0625rem solid #000; /* 1px */
-        }
 
         .bottom-subtext {
             font-size: 1rem; /* 16px */
@@ -98,12 +94,12 @@
         }
 
         .footer {
-            position: fixed;
-            bottom: 1.5em; /* 24px */
-            left: 0.75em; /* 12px */
-            right: 0.75em; /* 12px */
+          position: fixed;
+            bottom: 1.5em;
+            left: 0.75em;
+            right: 0.75em;
             text-align: center;
-            font-size: 0.75em; /* 12px */
+            font-size: 0.75em;
         }
     </style>
 </head>
@@ -121,24 +117,25 @@
         <div class="date">MARCH 6 2025</div>
 
         <!-- Main Headline -->
-        <h1 class="main-headline">APRON RECORDS COLLABS WITH NIKE ON AIR MAX “180”</h1>
+        <h1 class="main-headline">APRON RECORDS COLLAB WITH NIKE ON AIR MAX “180”</h1>
 
         <!-- Article Section -->
         <div class="article-section">
             <!-- Left: Small Headline -->
-            <h2 class="sub-headline">STEVEN JULIEN - ULTRA FT. JAMES MASSIAH (VIDEO)</h2>
-            <!-- Right: Image Placeholder -->
-            <div class="image-placeholder"></div>
+        <h2 class="main-headline">STEVEN JULIEN FT JAMES MASSIAH - ULTRA (MUSIC)</h2>
+
+            <div class="image"><img src="https://i1.sndcdn.com/artworks-SO5z4ml9DUhEzHPd-plbYQQ-t500x500.jpg
+" width="30%"></div>
         </div>
 
         <!-- Bottom Headlines -->
         <h3 class="bottom-headline red">IBM LAUNCHES AI DEVELOPMENT PLATFORM</h3>
         <p class="bottom-subtext blue">IBM Launches AI Development Platform With Renewed...</p>
     </div>
+    
+    
     <footer class="footer">
-        <img src="https://raw.githubusercontent.com/ta222222/hammernews/refs/heads/main/hwt.png" 
-             alt="Hammer Mag Logo" 
-             style="width: 3.75rem; filter: invert(1);"> <!-- 60px to rem -->
+               © 2025 hammer mag
     </footer>
     <script>
         // Mode toggle
