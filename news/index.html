@@ -39,67 +39,135 @@
 
         /* Navbar styling */
         nav {
-            padding: 1.5em 1.5em 0; /* 1.5em is fine depending on base font-size */
+            padding: 1.5em 1.5em 0;
             display: flex;
-            gap: 0.75em; /* 12px */
-            margin-bottom: 1.5em; /* 24px */
+            gap: 0.75em;
+            margin-bottom: 1.5em;
             position: sticky;
             top: 0;
+            background-color: inherit; /* Inherit background for mode changes */
+            z-index: 10; /* Ensure navbar stays on top */
         }
+        
+        /* Navbar for Normal mode */
+body.normal nav {
+    background-color: white; /* White background in normal mode */
+}
 
+            /* Navbar for Heated mode */
+body.heated nav {
+    background-color: red; /* Red background in heated mode */
+}
+        
+        
         /* Container for the entire layout */
         .container {
             max-width: 100vw;
-            padding: 0 1.5em; /* Match the navbar padding */
+            padding: 0 1.5em;
         }
 
         .date {
-            font-size: 0.75rem; /* 12px ? */
-            margin-bottom: 0.625rem; /* 10px */
+            font-size: 0.75rem;
+            margin-bottom: 0.625rem;
             text-transform: uppercase;
         }
 
         .main-headline,
-        .sub-headline, 
+        .sub-headline,
         .bottom-headline {
-            margin: 1.25rem 0; /* 20px */
+            margin: 1.25rem 0;
             text-transform: uppercase;
             font-weight: bold;
-            letter-spacing: -0.0625rem; /* -1px */
-            line-height: 1;
+            letter-spacing: -0.0625rem;
+            line-height: 1.1; /* Adjusted line-height for better spacing */
         }
 
         .main-headline {
-            font-size: 1.5rem; /* 24px */
+            font-size: 2.5rem; /* Increased font size */
+            width: 100%; /* Take full width */
         }
 
         .sub-headline {
-            font-size: 1.5rem; /* 24px */
-            width: 50%;
-        }
-
-
-        .bottom-subtext {
-            font-size: 1rem; /* 16px */
-            margin-bottom: 1.25rem; /* 20px */
-            letter-spacing: -0.03125rem; /* -0.5px */
-        }
-
-        .red {
-            color: #ff0000; /* Red color for specific headlines */
-        }
-
-        .blue {
-            color: #0000ff; /* Blue color for specific subtext */
+            font-size: 2.5rem; /* Adjusted font size */
+            width: 100%; /* Take full width */
         }
 
         .footer {
-          position: fixed;
+            position: fixed;
             bottom: 1.5em;
             left: 0.75em;
             right: 0.75em;
             text-align: center;
             font-size: 0.75em;
+        }
+
+        .article-section {
+            display: flex;
+            flex-direction: column; /* Stack items vertically on mobile */
+            align-items: center; /* Center items horizontally */
+            gap: 1.5em;
+            width: 100%; /* Ensure it takes up full width */
+        }
+
+        .article-section h2,
+        .article-section img {
+            width: 100%; /* Take full width on mobile */
+        }
+
+        .image {
+            justify-content: center;
+            align-items: center;
+            width: 75%;
+        }
+
+        .image img {
+            width: 70%;
+            height: auto;
+            margin: 0 auto; /* Center image horizontally */
+        }
+
+        /* Center text and elements only on small screens */
+        @media (max-width: 767px) {
+            
+            nav {
+                        display: flex;
+                flex-direction: row;
+                align-items: center; /* Center the content horizontally */
+                justify-content: center; /* Center the content vertically */
+                text-align: center; /* Center text for headings and paragraphs */
+            padding: 1.5em 1.5em 0;
+            }
+            
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center; /* Center the content horizontally */
+                justify-content: center; /* Center the content vertically */
+                text-align: center; /* Center text for headings and paragraphs */
+                padding: 0 1.5em;
+            }
+
+            .article-section {
+                display: flex;
+                flex-direction: column;
+                align-items: center; /* Center items horizontally */
+                justify-content: center; /* Center items vertically */
+                gap: 1.5em;
+                width: 100%;
+            }
+
+            .main-headline,
+            .sub-headline,
+            .bottom-headline,
+            .article-section h2 {
+                text-align: center; /* Center text for small screens */
+                width: 100%; /* Ensure headlines take up the full width */
+            }
+
+            .article-section img {
+                max-width: 100%; /* Ensure the image scales with screen size */
+                height: auto;
+            }
         }
     </style>
 </head>
@@ -113,50 +181,29 @@
         <a href="#" id="modeToggleLink">heated mode</a>
     </nav>
     <div class="container">
-        <!-- Date -->
         <div class="date">MARCH 6 2025</div>
 
-        <!-- Main Headline -->
         <h1 class="main-headline">APRON RECORDS COLLAB WITH NIKE ON AIR MAX “180”</h1>
-               
-
-        <!-- Article Section -->
         <div class="article-section">
-            <!-- Left: Small Headline -->
-        <h2 class="main-headline">STEVEN JULIEN FT JAMES MASSIAH - ULTRA (MUSIC)</h2>
-
-            <div class="image"><img src="https://i1.sndcdn.com/artworks-SO5z4ml9DUhEzHPd-plbYQQ-t500x500.jpg
-" width="50%">
- <h3 class="main-headline">Google Agrees to Buy Cloud Security Firm Wiz for $32 Billion</h3>
- <h3 class="main-headline">Google Agrees to Buy Cloud Security Firm Wiz for $32 Billion</h3>
- <h3 class="main-headline">Google Agrees to Buy Cloud Security Firm Wiz for $32 Billion</h3>
- <h3 class="main-headline">Google Agrees to Buy Cloud Security Firm Wiz for $32 Billion</h3>
- <h3 class="main-headline">Google Agrees to Buy Cloud Security Firm Wiz for $32 Billion</h3>
- <h3 class="main-headline">Google Agrees to Buy Cloud Security Firm Wiz for $32 Billion</h3>
- <h3 class="main-headline">Google Agrees to Buy Cloud Security Firm Wiz for $32 Billion</h3>
- <h3 class="main-headline">Google Agrees to Buy Cloud Security Firm Wiz for $32 Billion</h3>
- <h3 class="main-headline">Google Agrees to Buy Cloud Security Firm Wiz for $32 Billion</h3>
- <h3 class="main-headline">Google Agrees to Buy Cloud Security Firm Wiz for $32 Billion</h3>
- <h3 class="main-headline">Google Agrees to Buy Cloud Security Firm Wiz for $32 Billion</h3>
- <h3 class="main-headline">Google Agrees to Buy Cloud Security Firm Wiz for $32 Billion</h3>
- <h3 class="main-headline">Google Agrees to Buy Cloud Security Firm Wiz for $32 Billion</h3>
- <h3 class="main-headline">Google Agrees to Buy Cloud Security Firm Wiz for $32 Billion</h3>
- <h3 class="main-headline">Google Agrees to Buy Cloud Security Firm Wiz for $32 Billion</h3>
- <h3 class="main-headline">Google Agrees to Buy Cloud Security Firm Wiz for $32 Billion</h3>
- <h3 class="main-headline">Google Agrees to Buy Cloud Security Firm Wiz for $32 Billion</h3>
-
-</div>
+            <h2 class="main-headline">STEVEN JULIEN FT JAMES MASSIAH - ULTRA</h2><br>
+        </div>
+        <div class="image">
+            <img src="https://i1.sndcdn.com/artworks-SO5z4ml9DUhEzHPd-plbYQQ-t500x500.jpg">
         </div>
 
-        <!-- Bottom Headlines -->
+        <h3 class="main-headline">Google Agrees to Buy Cloud Security Firm Wiz for $32 Billion</h3>
+        <!-- Repeating headlines for demo purposes -->
+        <h3 class="main-headline">Google Agrees to Buy Cloud Security Firm Wiz for $32 Billion</h3>
+        <h3 class="main-headline">Google Agrees to Buy Cloud Security Firm Wiz for $32 Billion</h3>
+
         <h4 class="bottom-headline red">IBM LAUNCHES AI DEVELOPMENT PLATFORM</h4>
         <p class="bottom-subtext blue">IBM Launches AI Development Platform With Renewed...</p>
     </div>
-    
-    
+
     <footer class="footer">
-               © 2025 hammer mag
+        © 2025 hammer mag
     </footer>
+
     <script>
         // Mode toggle
         const modeToggleLink = document.getElementById('modeToggleLink');
@@ -166,6 +213,17 @@
             document.body.classList.toggle('normal');
             modeToggleLink.textContent = document.body.classList.contains('heated') ? 'normal mode' : 'heated mode';
         });
+
+        // Set initial mode based on local storage or default to normal
+        if(localStorage.getItem('mode') === 'heated') {
+            document.body.classList.add('heated');
+            document.body.classList.remove('normal');
+            modeToggleLink.textContent = 'normal mode';
+        } else {
+            document.body.classList.add('normal');
+            document.body.classList.remove('heated');
+            modeToggleLink.textContent = 'heated mode';
+        }
 
         // Update Date and Time
         function updateDateTime() {
@@ -189,21 +247,12 @@
         const loadingLinks = document.querySelectorAll('.loading-link');
         loadingLinks.forEach(link => {
             link.addEventListener('click', function(event) {
-                // Prevent the default link behavior (navigation)
                 event.preventDefault();
-
-                // Add the loading style to the body
                 document.body.classList.add('loading-link-style');
-
-                // Get the target URL from the link's href attribute
                 const targetURL = this.getAttribute('href');
-
-                // Simulate a delay (you can remove this in a real application)
-                // or replace it with the actual loading process
                 setTimeout(() => {
-                    // Navigate to the target URL after the delay
                     window.location.href = targetURL;
-                }, 500); // Adjust the delay as needed
+                }, 500);
             });
         });
     </script>
