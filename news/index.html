@@ -40,6 +40,7 @@
         /* Navbar styling */
         nav {
             padding: 1.5em 1.5em 0;
+            padding-bottom: 1.5em;
             display: flex;
             gap: 0.75em;
             margin-bottom: 1.5em;
@@ -50,14 +51,14 @@
         }
         
         /* Navbar for Normal mode */
-body.normal nav {
-    background-color: white; /* White background in normal mode */
-}
+        body.normal nav {
+         background-color: white; /* White background in normal mode */
+        }
 
             /* Navbar for Heated mode */
-body.heated nav {
-    background-color: red; /* Red background in heated mode */
-}
+        body.heated nav {
+        background-color: red; /* Red background in heated mode */
+        }
         
         
         /* Container for the entire layout */
@@ -68,7 +69,7 @@ body.heated nav {
 
         .date {
             font-size: 0.75rem;
-            margin-bottom: 0.625rem;
+            margin-bottom: 3.5rem;
             text-transform: uppercase;
         }
 
@@ -99,6 +100,8 @@ body.heated nav {
             right: 0.75em;
             text-align: center;
             font-size: 0.75em;
+            margin-bottom: 0.75rem;
+
         }
 
         .article-section {
@@ -121,7 +124,7 @@ body.heated nav {
         }
 
         .image img {
-            width: 70%;
+            width: 75%;
             height: auto;
             margin: 0 auto; /* Center image horizontally */
         }
@@ -193,11 +196,13 @@ body.heated nav {
 
         <h3 class="main-headline">Google Agrees to Buy Cloud Security Firm Wiz for $32 Billion</h3>
         <!-- Repeating headlines for demo purposes -->
-        <h3 class="main-headline">Google Agrees to Buy Cloud Security Firm Wiz for $32 Billion</h3>
-        <h3 class="main-headline">Google Agrees to Buy Cloud Security Firm Wiz for $32 Billion</h3>
+                <h3 class="main-headline">Playboi Carti’s ‘MUSIC:’ When rage finally goes pop</h3>
+                <!-- 
+        <h3 class="main-headline">The Same Tech Behind ChatGPT Is Being Used to Produce Novel Fragrances</h3> -->
 
-        <h4 class="bottom-headline red">IBM LAUNCHES AI DEVELOPMENT PLATFORM</h4>
-        <p class="bottom-subtext blue">IBM Launches AI Development Platform With Renewed...</p>
+        <h4 class="main-headline">Amelia Gray launches Coperni’s New Ray-Ban Meta Collaboration at Paris Fashion Week</h4>
+        <!--
+        <p class="bottom-subtext blue">IBM Launches AI Development Platform With Renewed...</p> -->
     </div>
 
     <footer class="footer">
@@ -214,16 +219,7 @@ body.heated nav {
             modeToggleLink.textContent = document.body.classList.contains('heated') ? 'normal mode' : 'heated mode';
         });
 
-        // Set initial mode based on local storage or default to normal
-        if(localStorage.getItem('mode') === 'heated') {
-            document.body.classList.add('heated');
-            document.body.classList.remove('normal');
-            modeToggleLink.textContent = 'normal mode';
-        } else {
-            document.body.classList.add('normal');
-            document.body.classList.remove('heated');
-            modeToggleLink.textContent = 'heated mode';
-        }
+  
 
         // Update Date and Time
         function updateDateTime() {
